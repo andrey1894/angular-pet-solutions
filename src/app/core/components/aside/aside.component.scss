@@ -1,7 +1,63 @@
 @import "styles";
 
+$logo_size: 140px;
+$home_logo_h: 200px;
+
 .app-aside {
   height: 100%;
   width: $app_aside_width;
   background-color: var(--primary-color);
+
+  .nav {
+    .home-logo-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      font-weight: 900;
+      font-size: 2rem;
+      background: var(--primary-light-color);
+    }
+
+    .logo {
+      margin: 0 auto (-$logo_size / 2) auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: $logo_size;
+      height: $logo_size;
+
+      white-space: nowrap;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      transform: translateY(-50%);
+    }
+
+    .link {
+      display: block;
+      padding: 2rem 0.5rem;
+      text-align: center;
+
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: var(--primary-light-color);
+      }
+
+      .mat-icon {
+        font-size: 2.5rem;
+        width: 2.5rem;
+      }
+
+      .title {
+        display: block;
+        font-weight: bold;
+      }
+
+    }
+  }
 }

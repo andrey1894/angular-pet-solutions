@@ -1,2 +1,2 @@
-export * from './header/header.component'
-export * from './aside/aside.component'
+export * from './header/header.module'
+export * from './aside/aside.module'

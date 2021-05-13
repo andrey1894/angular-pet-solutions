@@ -2,5 +2,5 @@
 
 .app-header {
   height: $app_header_height;
-  background: rgb(226, 226, 226);
+  border-bottom: 4px solid var(--primary-color);
 }

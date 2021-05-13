@@ -9,8 +9,10 @@
   --light-color: #{$light-base-color};
   --dark-color: #{$dark-base-color};
 
+  --primary-light-color: #{map-get($mat-primary, 100)};
+
   --font-color: #{$dark-primary-text};
   --grey-font-color: #{map-get($mat-grey, 800)};
-  --bg-color: $light-base-color;
+  --bg-color: #{$light-base-color};
   --border-color: #{$dark-border-color};
 }
