@@ -1,6 +1,18 @@
 @import "styles";
 
 .app-header {
+  position: relative;
   height: $app_header_height;
   border-bottom: 4px solid var(--primary-color);
+
+  .page-title {
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    color:var(--light-color);
+    font-weight: bold;
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--primary-color);
+  }
 }

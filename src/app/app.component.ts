@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'angular-pet-solutions';
+  pageTitle = '';
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-
+    this.router.events.subscribe(data => {
+      if (data instanceof ActivationStart) {
+        this.pageTitle = data.snapshot.data?.title
+      }
+    });
   }
 
 }
