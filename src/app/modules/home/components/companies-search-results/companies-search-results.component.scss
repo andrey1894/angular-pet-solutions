@@ -1,0 +1,29 @@
+.companies-wrapper {
+  .company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      margin-bottom: 1rem;
+      .name, .address {
+        margin: 0;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+    }
+
+    .action-block {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      .btn {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+

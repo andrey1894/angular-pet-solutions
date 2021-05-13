@@ -1,1 +1,5 @@
-<p>home works!</p>
+<div class="home-wrapper">
+  <app-companies-search-bar class="search-bar" (getCompanies)="getCompanies($event)"></app-companies-search-bar>
+  <app-companies-search-results class="search-results" [companies]="companies"></app-companies-search-results>
+</div>
+

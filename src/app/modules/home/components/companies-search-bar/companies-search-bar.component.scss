@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 10vh;
+  justify-content: space-between;
+  align-items: center;
+
+  .search-field {
+    width: 100%;
+
+    .search-btn {
+      font-size: 1.5rem;
+    }
+  }
+
+  .add-btn {
+    margin-left: 1.5rem;
+  }
+}

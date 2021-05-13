@@ -1,0 +1,16 @@
+<div class="companies-wrapper">
+  <section class="company" *ngFor="let company of companies">
+    <div class="info">
+      <p class="name">{{ company.name }}</p>
+      <p class="address">{{ company.address1 + ' ' + company.address2 }}</p>
+    </div>
+    <div class="action-block">
+      <button mat-mini-fab color="accent" class="btn">
+        <mat-icon>location_on</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" class="btn">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+  </section>
+</div>

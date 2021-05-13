@@ -23,7 +23,7 @@
   );
 }
 
-$light-foreground: my-mat-light-theme-foreground($light-base-color);
+$light-foreground: my-mat-light-theme-foreground($dark-base-color);
 
 $app-primary: mat-palette($mat-primary);
 $app-accent:  mat-palette($mat-accent);
