@@ -26,8 +26,6 @@ export class AddCustomerComponent implements OnInit {
     this.customerApiService.addCustomer(customer)
       ? this.router.navigateByUrl('/')
       : this.customerNameErr = true;
-
-    console.log(this.customerNameErr)
   }
 
 }
