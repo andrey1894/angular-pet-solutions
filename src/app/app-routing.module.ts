@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./modules/home').then(m => m.HomeModule),
   },
+  {
+    path: 'add-customer',
+    loadChildren: () => import('./modules/add-customer').then(m => m.AddCustomerModule),
+  },
   { path: '**', redirectTo: '/' },
 ];
 

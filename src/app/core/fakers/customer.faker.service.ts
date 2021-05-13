@@ -31,7 +31,7 @@ export class CustomerFakerService {
   }
 
   addCustomer(customer: ICustomer): ICustomer {
-    if (this.customers.find(c => c.name.toLowerCase().includes(customer.name.toLowerCase()))) {
+    if (this.customers.find(c => c.name.toLowerCase() === customer.name.toLowerCase())) {
       return null;
     }
     this.customers.push(customer);

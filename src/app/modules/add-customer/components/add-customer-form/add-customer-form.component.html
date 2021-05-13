@@ -1,0 +1,94 @@
+<mat-card class="add-wrapper">
+
+  <mat-card-header>
+    <mat-card-title>New customer</mat-card-title>
+    <a mat-button routerLink="/" class="cancel-btn">
+      <mat-icon>close</mat-icon>
+    </a>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="form" [formGroup]="formGroup" (ngSubmit)="addCustomer()">
+      <div class="form-icon-group">
+        <div class="icon">
+          <mat-icon>person</mat-icon>
+        </div>
+
+        <div class="inputs">
+          {{ isNameErr }}
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" (input)="isNameErr = false">
+            <mat-error *ngIf="formGroup.get('name').hasError('required')">Name is required</mat-error>
+            <mat-error *ngIf="formGroup.get('name').hasError('nameValidator')">Name is uniq</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-icon-group">
+        <div class="icon">
+          <mat-icon>location_on</mat-icon>
+        </div>
+
+        <div class="inputs">
+          <mat-form-field>
+            <mat-label>Address 1</mat-label>
+            <input matInput formControlName="address1">
+            <mat-error *ngIf="formGroup.get('address1').hasError('required')">Address is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Address 2</mat-label>
+            <input matInput formControlName="address2">
+            <mat-error *ngIf="formGroup.get('address2').hasError('required')">Address is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Postcode</mat-label>
+            <input matInput formControlName="postcode">
+            <mat-error *ngIf="formGroup.get('postcode').hasError('required')">Postcode is required</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-icon-group">
+        <div class="icon">
+          <mat-icon>phone</mat-icon>
+        </div>
+
+        <div class="inputs">
+          <mat-form-field>
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phone">
+            <mat-error *ngIf="formGroup.get('phone').hasError('pattern')">Phone isn't correct: +1 555-555-5555</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-icon-group">
+        <div class="icon">
+          <mat-icon>mail</mat-icon>
+        </div>
+
+        <div class="inputs">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="formGroup.get('email').hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="formGroup.get('email').hasError('email')">Email isn't correct</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="errors text-warn">
+        <p *ngIf="isNameErr">Name is uniq</p>
+      </div>
+
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" [disabled]="!formGroup.valid" (click)="addCustomer()">
+          ADD CUSTOMER
+        </button>
+      </mat-card-actions>
+
+    </form>
+  </mat-card-content>
+
+</mat-card>
