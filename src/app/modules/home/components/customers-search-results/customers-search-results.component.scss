@@ -1,11 +1,12 @@
 .customers-wrapper {
   .customer {
+    margin-bottom: 1rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .info {
-      margin-bottom: 1rem;
       .name, .address {
         margin: 0;
       }

@@ -9,8 +9,12 @@ import { ICustomer } from '@core/models';
 export class CustomerApiService {
   constructor(private customerFakerService: CustomerFakerService) {}
 
-  getCustomers(searchValue: string) {
+  getCustomers(searchValue: string): ICustomer[] {
     return this.customerFakerService.getCustomers(searchValue);
+  }
+
+  getCustomer(id: number): ICustomer {
+    return this.customerFakerService.getCustomer(id);
   }
 
   addCustomer(customer: ICustomer): ICustomer {

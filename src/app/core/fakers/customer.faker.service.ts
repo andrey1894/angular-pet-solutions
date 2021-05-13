@@ -30,6 +30,10 @@ export class CustomerFakerService {
       : []
   }
 
+  getCustomer(id: number): ICustomer {
+    return this.customers.find(c => c.id === id);
+  }
+
   addCustomer(customer: ICustomer): ICustomer {
     if (this.customers.find(c => c.name.toLowerCase() === customer.name.toLowerCase())) {
       return null;

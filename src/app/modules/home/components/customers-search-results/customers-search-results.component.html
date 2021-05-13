@@ -2,15 +2,15 @@
   <section class="customer" *ngFor="let customer of customers">
     <div class="info">
       <p class="name">{{ customer.name }}</p>
-      <p class="address">{{ customer.address1 + ' ' + customer.address2 }}</p>
+      <p class="address">{{ customer.address1 }}  {{ customer.address2 }}</p>
     </div>
     <div class="action-block">
-      <button mat-mini-fab color="accent" class="btn">
+      <a [routerLink]="['customer', customer.id]" mat-mini-fab color="accent" class="btn">
         <mat-icon>location_on</mat-icon>
-      </button>
-      <button mat-mini-fab color="accent" class="btn">
+      </a>
+      <a [routerLink]="['customer', customer.id]" mat-mini-fab color="accent" class="btn">
         <mat-icon>info</mat-icon>
-      </button>
+      </a>
     </div>
   </section>
 </div>
