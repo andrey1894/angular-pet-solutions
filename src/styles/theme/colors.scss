@@ -1,0 +1,16 @@
+@import './mat-colors';
+
+:root {
+  --primary-color: #{map-get($mat-primary, 500)};
+  --accent-color: #{map-get($mat-accent, 500)};
+  --warn-color: #{map-get($mat-warn, 500)};
+
+  --grey-color: #{map-get($mat-grey, 800)};
+  --light-color: #{$light-base-color};
+  --dark-color: #{$dark-base-color};
+
+  --font-color: #{$dark-primary-text};
+  --grey-font-color: #{map-get($mat-grey, 800)};
+  --bg-color: $light-base-color;
+  --border-color: #{$dark-border-color};
+}

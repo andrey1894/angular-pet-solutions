@@ -1,0 +1,7 @@
+@import "styles";
+
+.app-aside {
+  height: 100%;
+  width: $app_aside_width;
+  background-color: var(--primary-color);
+}

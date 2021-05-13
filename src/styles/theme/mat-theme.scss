@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@import './mat-colors';
+
+@include mat-core();
+
+@function my-mat-light-theme-foreground($color) {
+  @return (
+    base:              $color,
+    divider:           rgba($color, 0.12),
+    dividers:          rgba($color, 0.12),
+    disabled:          rgba($color, 0.38),
+    disabled-button:   rgba($color, 0.38),
+    disabled-text:     rgba($color, 0.38),
+    elevation:         black,
+    hint-text:         rgba($color, 0.38),
+    secondary-text:    rgba($color, 0.54),
+    icon:              rgba($color, 0.54),
+    icons:             rgba($color, 0.54),
+    text:              rgba($color, 0.87),
+    slider-off:        rgba($color, 0.26),
+    slider-off-active: rgba($color, 0.38),
+    slider-min:        rgba($color, 0.38)
+  );
+}
+
+$light-foreground: my-mat-light-theme-foreground($light-base-color);
+
+$app-primary: mat-palette($mat-primary);
+$app-accent:  mat-palette($mat-accent);
+$app-warn:    mat-palette($mat-warn);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+$app-theme-foreground: map-merge($app-theme, (foreground: $light-foreground));
+
+@include angular-material-theme($app-theme-foreground);
