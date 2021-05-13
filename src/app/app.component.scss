@@ -1,0 +1,27 @@
+.app-wrapper {
+  display: flex;
+  height: 100vh;
+
+  .app-aside {
+    background: rgb(161, 31, 31);
+    width: 200px;
+  }
+
+  .app-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .app-header {
+      height: 60px;
+      background: #000;
+    }
+
+    .app-main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
