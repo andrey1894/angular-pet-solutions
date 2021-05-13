@@ -7,13 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { CompaniesSearchBarComponent, CompaniesSearchResultsComponent } from './components';
+import { CustomersSearchBarComponent, CustomersSearchResultsComponent } from './components';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CompaniesSearchBarComponent,
-    CompaniesSearchResultsComponent
+    CustomersSearchBarComponent,
+    CustomersSearchResultsComponent
   ],
   imports: [
     CommonModule,

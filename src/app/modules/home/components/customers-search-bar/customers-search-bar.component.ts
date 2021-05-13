@@ -1,16 +1,16 @@
 import { EventEmitter, OnDestroy, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { filter, debounceTime } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-companies-search-bar',
-  templateUrl: './companies-search-bar.component.html',
-  styleUrls: ['./companies-search-bar.component.scss']
+  selector: 'app-customers-search-bar',
+  templateUrl: './customers-search-bar.component.html',
+  styleUrls: ['./customers-search-bar.component.scss']
 })
-export class CompaniesSearchBarComponent implements OnInit, OnDestroy {
+export class CustomersSearchBarComponent implements OnInit, OnDestroy {
 
-  @Output() getCompanies = new EventEmitter<string>();
+  @Output() getCustomers = new EventEmitter<string>();
 
   value = '';
 
@@ -22,13 +22,12 @@ export class CompaniesSearchBarComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.search$
     .pipe(
-      filter(() => this.value.length >= 3),
       debounceTime(1000))
     .subscribe(() => this.search());
   }
 
   search(): void {
-    this.getCompanies.emit(this.value);
+    this.getCustomers.emit(this.value);
   }
 
   ngOnDestroy(): void {

@@ -1,1 +1,1 @@
-export * from './company.faker.service';
+export * from './customer.faker.service';

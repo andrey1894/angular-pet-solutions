@@ -1,2 +1,2 @@
-export * from './companies-search-bar/companies-search-bar.component';
-export * from './companies-search-results/companies-search-results.component';
+export * from './customers-search-bar/customers-search-bar.component';
+export * from './customers-search-results/customers-search-results.component';

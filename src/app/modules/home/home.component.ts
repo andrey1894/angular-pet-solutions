@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CompanyApiService } from '@core/api';
-import { ICompany } from '@core/models';
+import { CustomerApiService } from '@core/api';
+import { ICustomer } from '@core/models';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +10,15 @@ import { ICompany } from '@core/models';
 })
 export class HomeComponent implements OnInit {
 
-  companies: ICompany[];
+  customers: ICustomer[];
 
-  constructor(private companyApiService: CompanyApiService) { }
+  constructor(private customerApiService: CustomerApiService) { }
 
   ngOnInit(): void {
   }
 
-  getCompanies(searchValue: string): void {
-    this.companies = this.companyApiService.getCompanies(searchValue);
+  getCustomers(searchValue: string): void {
+    this.customers = this.customerApiService.getCustomers(searchValue);
   }
 
 }
