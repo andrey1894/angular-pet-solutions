@@ -1,0 +1,58 @@
+$count_size: 2rem;
+
+.product-wrapper {
+  .mat-card-header {
+    margin-top: -2rem;
+
+    .count {
+      margin-right: 1rem;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      min-width: $count_size;
+      height: $count_size;
+      border-radius: 50%;
+
+      color: var(--light-color);
+
+      &.count1 { background-color: var(--warn-color) }
+      &.count2 { background-color: var(--accent-color) }
+      &.count3 { background-color: var(--primary-color) }
+    }
+
+  }
+
+  .mat-card-content {
+    position: relative;
+
+    .img {
+      text-align: center;
+    }
+
+    .cost {
+      padding: 0.5rem 2rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      border-radius: 1rem;
+      border: 2px solid var(--primary-color);
+      background-color: var(--bg-color);
+    }
+
+    .title {
+      margin: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .mat-card-actions {
+    padding: 0 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

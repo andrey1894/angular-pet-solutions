@@ -28,6 +28,13 @@ a, a:focus, a:active, a:visited, a:hover {
   color: var(--accent-color);
 }
 
+.img {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 .text-center {
   text-align: center;
 }

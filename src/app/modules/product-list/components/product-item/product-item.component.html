@@ -1,0 +1,28 @@
+<mat-card class="product-wrapper">
+
+  <mat-card-header>
+    <mat-card-title>
+      <span class="count count1">0</span><span class="count count2">0</span><span class="count count3">{{ product?.count }}</span>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="img">
+      <img [src]="product?.img">
+    </div>
+    <span class="cost">$ {{ product?.cost }}</span>
+    <p class="title">{{ product?.size }}</p>
+    <p class="title">{{ product?.name }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-stroked-button color="primary">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <span class="count">0</span>
+    <button mat-stroked-button color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-actions>
+
+</mat-card>

@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'add-customer',
     loadChildren: () => import('./modules/add-customer').then(m => m.AddCustomerModule),
   },
+  {
+    path: 'product-list',
+    loadChildren: () => import('./modules/product-list').then(m => m.ProductListModule),
+  },
   { path: '**', redirectTo: '/' },
 ];
 
